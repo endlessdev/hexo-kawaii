@@ -1,0 +1,8 @@
+<ul class="post-list">
+    <% page.posts.each(function(item){ %>
+    <li>
+        <%- partial('_widget/post-box.ejs', {post: item}) %>
+    </li>
+    <% }); %>
+    <%- partial('_widget/pagination.ejs', {page: page}) %>
+</ul>

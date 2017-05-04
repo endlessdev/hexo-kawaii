@@ -1,0 +1,23 @@
+<div class="blog-post">
+    <!-- Title -->
+    <h1 class="blog-post-title">
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title || item.link%>
+        </a>
+    </h1>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        <i class="calendar outline icon"></i> <%= item.date.format(config.date_format) %>
+        <% if(item.author) { %>
+        by <%- item.author %>
+        <% } %>
+    </p>
+    <!-- Content -->
+    <div class="blog-post-content">
+    <%- item.content %>
+    </div>
+    <div class="ui divider blog-post-end-line"/>
+    <!-- Tags and Categories links -->
+    <%- partial('article-tags', {item: item}) %>
+    <%- partial('article-categories', {item: item}) %>
+</div>

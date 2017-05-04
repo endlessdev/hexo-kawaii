@@ -1,0 +1,7 @@
+<div class="ui pagination menu">
+    <% for (var i = 1; i <= page.total; i++){ %>
+    <a class="<%- i == page.current ? 'active' : '' %> item">
+        <%- i %>
+    </a>
+    <% } %>
+</div>

@@ -1,0 +1,192 @@
+@media (max-width: 768px) {
+  nav.main-nav {
+    display: none !important;
+  }
+  section.content-section {
+    padding-left: 0 !important;
+    .content-header {
+      display: none;
+    }
+    .mobile-top-menu {
+      padding: 10px;
+      display: block;
+      padding-left: 20px;
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #fafafa;
+      z-index: 10;
+      &.slide-in{
+        visibility: hidden;
+        animation: slide-in-header-m;
+        animation-duration: 0.25s;
+      }
+      &.slide-out{
+        animation: slide-out-header-m;
+        animation-duration: 0.25s;
+        visibility: visible;
+      }
+      .menu-title {
+        display: inline-block;
+        .ion-menu-icon {
+          &:before {
+            font-family: "Ionicons";
+            content: "\f394";
+            font-size: 25px;
+            vertical-align: middle;
+            color: #909090;
+            margin-right: 10px;
+          }
+        }
+        .thumb {
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          vertical-align: middle;
+          border-radius: 50%;
+          background-image: url("https://avatars3.githubusercontent.com/u/3799158?v=3&s=460");
+          border: 2px solid #e0e0e0;
+          margin-right: 5px;
+          background-position: center;
+          background-size: cover
+        }
+        .content {
+          display: inline-block;
+          vertical-align: middle;
+
+          .title {
+            margin: 0;
+            font-weight: normal;
+            font-size: 18px;
+
+          }
+          .summary {
+            font-size: 12px;
+            color: #909090;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.mobile-top-menu {
+  display: none;
+}
+
+nav.main-nav {
+  width: $main-nav-min-width;
+
+  position: fixed;
+  background-color: white;
+  display: inline-block;
+  height: 100vh;
+  border-right: 1px solid #e0e0e0;
+  font-family: "Helvetica Neue", sans-serif !important;
+  padding: 20px;
+  vertical-align: top;
+  margin-right: -4px;
+  background-image: url(../images/nav-bg.png);
+  background-repeat: no-repeat;
+  .main-nav-wrapper {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: table;
+    .nav-footer {
+      display: table-caption;
+      vertical-align: bottom;
+      text-align: center;
+      caption-side: bottom;
+      p {
+        text-align: center;
+        color: #909090;
+        margin-bottom: 0;
+        .github:after {
+          content: "\f233";
+          font-family: "Ionicons";
+          color: #909090;
+        }
+      }
+    }
+    .profile-box {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      .social {
+        font-family: "Ionicons";
+        letter-spacing: 5px;
+        .item {
+          &:after {
+            font-family: "Ionicons";
+          }
+          color: black !important;
+          &.twitter:after {
+            content: "\f243";
+          }
+          &.facebook:after {
+            content: "\f231"
+          }
+          &.instagram:after {
+            content: "\f350"
+          }
+          &.github:after {
+            content: "\f233"
+          }
+          &.dribbble:after {
+            content: "\f22d"
+          }
+        }
+      }
+      .thumb {
+        width: 130px;
+        height: 130px;
+        background-image: url("https://avatars3.githubusercontent.com/u/3799158?v=3&s=460");
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: 10px;
+        background-position: center;
+        background-size: cover;
+      }
+      .comment {
+        color: #909090;
+      }
+      h3.name {
+        font-family: "Helvetica Neue", sans-serif !important;
+        font-weight: normal;
+        .logo {
+          vertical-align: middle;
+          height: 20px;
+          margin-right: 5px;
+        }
+        margin: 0;
+        b {
+          font-weight: bold;
+        }
+      }
+      .divider {
+        width: 80px;
+        height: 1px;
+        background: #e0e0e0;
+        margin: auto;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.main-nav-m{
+  display: none;
+  position: fixed;
+  z-index: 11;
+  &.active{
+
+  }
+}

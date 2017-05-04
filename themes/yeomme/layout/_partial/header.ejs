@@ -1,0 +1,32 @@
+<div class="mobile-top-menu">
+    <div class="menu-title">
+        <span class="ion-menu-icon"></span>
+        <div class="thumb"></div>
+        <div class="content">
+            <h2 class="title">JADE <b>YEOM</b></h2>
+            <small class="summary">不狂不及 - EXPERIMENT, FAIL, LEARN, REPEAT.</small>
+        </div>
+    </div>
+</div>
+<header class="content-header">
+    <div class="ui secondary pointing menu">
+        <% if(page.layout == "post") { %>
+        <a class="ui item back" href="/index.html">
+            <i class="angle left icon"></i> POSTS
+        </a>
+        <% } else { %>
+        <a class="item <%page.layout == "post" ? "active" : ""%>" href="/index.html">
+            POSTS
+        </a>
+        <% } %>
+        <a class="item" href="about.html">
+            ABOUT
+        </a>
+        <a class="item">
+            PHOTOS
+        </a>
+        <a class="item">
+            RESUME
+        </a>
+    </div>
+</header>

@@ -1,0 +1,45 @@
+@keyframes slide-out-header-m {
+  from {
+    margin-top: -40px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-in-header-m {
+  from {
+    margin-top: 0;
+    visibility:visible;
+  }
+  50% {
+    visibility:visible;
+  }
+  to {
+    margin-top: -40px;
+    visibility:hidden;
+  }
+}
+
+@keyframes slide-out-header {
+  from {
+    margin-top: -30px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-in-header {
+  from {
+    margin-top: 0;
+    visibility:visible;
+  }
+  50%{
+    visibility:visible;
+  }
+  to {
+    margin-top: -53px;
+    visibility:hidden;
+  }
+}

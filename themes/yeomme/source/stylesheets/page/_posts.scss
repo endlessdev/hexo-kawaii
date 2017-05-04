@@ -1,0 +1,58 @@
+.content-wrapper {
+  overflow-y: scroll;
+  padding: 65px 20px 10px;
+  .post-list {
+    padding-left: 0;
+    list-style-type: none;
+    .post-box {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .thumb {
+        background-image: url("http://d2.naver.com/content/images/2017/01/campus-seminar-speaker.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #e0e0e0;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .content {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 600px;
+        .extra-info {
+          color: #9e9e9e;
+          font-family: "Helvetica Neue", sans-serif !important;
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+        .title {
+          font-family: "Helvetica Neue", sans-serif !important;
+          font-size: 18px;
+          font-weight: normal;
+          color: #4b4b4b;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          margin-bottom: 10px;
+        }
+        .prev {
+          color: #9E9E9E;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1445px) {
+  .post-box {
+    .thumb {
+      width: 100% !important;
+    }
+  }
+  .pagination{
+    margin: auto;
+  }
+}
