@@ -43,3 +43,26 @@
     visibility:hidden;
   }
 }
+
+@keyframes slide-out-sidebar {
+  from {
+    margin-left: -80%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-in-sidebar {
+  from {
+    margin-left: 0;
+    visibility:visible;
+  }
+  50%{
+    visibility:visible;
+  }
+  to {
+    margin-left: -80%;
+    visibility:hidden;
+  }
+}

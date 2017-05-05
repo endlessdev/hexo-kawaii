@@ -15,18 +15,18 @@
             <i class="angle left icon"></i> POSTS
         </a>
         <% } else { %>
-        <a class="item <%page.layout == "post" ? "active" : ""%>" href="/index.html">
+        <a class="active <%- page.layout == undefined ? 'active' : '' %> item" href="/index.html">
             POSTS
         </a>
         <% } %>
-        <a class="item" href="about.html">
+        <a class="item" href="/about">
             ABOUT
         </a>
-        <a class="item">
+        <a class="item" href="/photos">
             PHOTOS
         </a>
-        <a class="item">
-            RESUME
+        <a class="item" href="/projects">
+            PROJECTS
         </a>
     </div>
 </header>

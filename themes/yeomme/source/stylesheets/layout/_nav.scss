@@ -17,12 +17,12 @@
       border-bottom: 1px solid #e0e0e0;
       background-color: #fafafa;
       z-index: 10;
-      &.slide-in{
+      &.slide-in {
         visibility: hidden;
         animation: slide-in-header-m;
         animation-duration: 0.25s;
       }
-      &.slide-out{
+      &.slide-out {
         animation: slide-out-header-m;
         animation-duration: 0.25s;
         visibility: visible;
@@ -62,7 +62,7 @@
 
           }
           .summary {
-            font-size: 12px;
+            font-size: 10px;
             color: #909090;
             text-overflow: ellipsis;
             display: inline-block;
@@ -75,7 +75,6 @@
     }
   }
 }
-
 
 .mobile-top-menu {
   display: none;
@@ -93,7 +92,7 @@ nav.main-nav {
   padding: 20px;
   vertical-align: top;
   margin-right: -4px;
-  background-image: url(../images/nav-bg.png);
+  background-image: url('../images/nav-bg.png');
   background-repeat: no-repeat;
   .main-nav-wrapper {
     width: 100%;
@@ -182,11 +181,75 @@ nav.main-nav {
   }
 }
 
-.main-nav-m{
-  display: none;
+.main-nav-m {
   position: fixed;
   z-index: 11;
-  &.active{
-
+  width: 100%;
+  &.slide-in {
+    .shadow {
+      transition: ease-in-out 0.5s;
+      visibility: hidden;
+    }
+    .main-nav-wrapper {
+      animation: slide-in-sidebar;
+      animation-duration: 0.5s;
+      visibility: hidden;
+    }
+  }
+  &.slide-out {
+    .main-nav-wrapper {
+      animation: slide-out-sidebar;
+      animation-duration: 0.5s;
+      visibility: visible;
+    }
+    .shadow{
+      transition: ease-in-out 0.5s;
+      visibility: visible;
+    }
+  }
+  .shadow {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 20;
+    height: 100vh;
+  }
+  .main-nav-wrapper {
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    z-index: 21;
+    height: 100vh;
+    .nav-bg {
+      position: absolute;
+      background-image: url('../images/nav-bg.png');
+      background-repeat: no-repeat;
+      opacity: 0.05;
+      height: 100vh;
+      width: 100%;
+    }
+    .nav-content {
+      padding: 20px;
+      .ion-back-icon {
+        font-size: 25px;
+        color: black;
+        &:before {
+          font-family: "Ionicons";
+          content: "\f2ca";
+        }
+      }
+      .menu {
+        list-style-type: none;
+        padding-left: 0 !important;
+        font-weight: bold;
+        line-height: 50px;
+        color: #4b4b4b;
+        letter-spacing: 2px;
+        .item > a {
+          color: black;
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
