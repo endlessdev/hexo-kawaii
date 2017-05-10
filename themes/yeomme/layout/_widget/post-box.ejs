@@ -1,13 +1,11 @@
 <article class="post-box">
-    <div class="thumb"></div>
+    <div class="thumb" style="background-image: url('<%- post.thumbnail %>')"></div>
     <div class="content">
         <%
         var desc = post.desc || strip_html(post.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
         %>
         <a href="<%- post.path %>"><h3 class="title"><%- post.title %></h3></a>
-        <p class="prev"><%- desc %></p>
-        <p class="extra-info"><i class="fa fa-calendar-o"
-                                 aria-hidden="true"></i> <%- post.date.format(config.date_format) %> | <i
-                    class="fa fa-eye" aria-hidden="true"></i> 474</p>
+        <p class="prev"><%- desc %>...</p>
+        <%- partial('../_partial/article-meta.ejs', {item: post}) %>
     </div>
 </article>

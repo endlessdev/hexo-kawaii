@@ -1,0 +1,17 @@
+<div class="ui two doubling cards photo-list">
+    <% site.categories.findOne({name: 'photos'}).posts.sort('date', -1).each(function(post){ %>
+    <div class="card">
+        <div class="thumb"
+             style="background-image: url('<%- url_for(post.path) + post.thumbnail %>')"></div>
+        <div class="darker"></div>
+        <div class="photo-content">
+            <div class="photo-content-wrapper">
+                <h2 class="title"><a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a></h2>
+                <p class="summary"><i class="calendar outline icon"></i><%= post.date.format(config.date_format) %></p>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</div>
+
+

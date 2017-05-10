@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>JADE YEOM :: 不狂不及 - EXPERIMENT, FAIL, LEARN, REPEAT.</title>
+    <title>JADE YEOM :: <%- page.title ? page.title : '不狂不及 - EXPERIMENT, FAIL, LEARN, REPEAT.'%></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
@@ -8,11 +8,18 @@
     <!--<link rel="stylesheet" href="stylesheets/master.css">-->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <%- css('/libraries/slick/slick.css') %>
+    <%- css('/libraries/slick/slick-theme.css') %>
+    <%- js('/libraries/slick/slick.min.js') %>
+    <%- js('/libraries/parallax.min.js') %>
     <%- js('/scripts/common.js') %>
 </head>

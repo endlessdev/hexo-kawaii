@@ -1,6 +1,8 @@
 <% if (config.disqus_shortname){ %>
+<div id="disqus_thread"></div>
 <script>
     var disqus_shortname = '<%= config.disqus_shortname %>';
+    var disqus_developer = 1;
     <% if (page.permalink){ %>
     var disqus_url = '<%= page.permalink %>';
     <% } %>

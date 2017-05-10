@@ -2,12 +2,26 @@
   nav.main-nav {
     display: none !important;
   }
+  .content-header {
+    display: block !important;
+    top: 60px !important;
+    z-index: 10 !important;
+    padding-top: 0px !important;
+    background-color: rgba(255,255,255,0.9) !important;
+    .ui.secondary.pointing.menu .item{
+      padding-bottom: 14px !important;
+    }
+  }
+  .content-wrapper{
+    padding: 100px 20px 10px  !important;
+  }
   section.content-section {
     padding-left: 0 !important;
     .content-header {
       display: none;
     }
     .mobile-top-menu {
+      z-index: 20 !important;
       padding: 10px;
       display: block;
       padding-left: 20px;
@@ -15,18 +29,17 @@
       width: 100%;
       height: 60px;
       border-bottom: 1px solid #e0e0e0;
-      background-color: #fafafa;
-      z-index: 10;
-      &.slide-in {
-        visibility: hidden;
-        animation: slide-in-header-m;
-        animation-duration: 0.25s;
-      }
-      &.slide-out {
-        animation: slide-out-header-m;
-        animation-duration: 0.25s;
-        visibility: visible;
-      }
+      background-color: #fff;
+      //&.slide-in {
+      //  visibility: hidden;
+      //  animation: slide-in-header-m;
+      //  animation-duration: 0.25s;
+      //}
+      //&.slide-out {
+      //  animation: slide-out-header-m;
+      //  animation-duration: 0.25s;
+      //  visibility: visible;
+      //}
       .menu-title {
         display: inline-block;
         .ion-menu-icon {
@@ -110,7 +123,6 @@ nav.main-nav {
         .github:after {
           content: "\f233";
           font-family: "Ionicons";
-          color: #909090;
         }
       }
     }
@@ -128,12 +140,17 @@ nav.main-nav {
           color: black !important;
           &.twitter:after {
             content: "\f243";
+            //color: #00aced;
           }
           &.facebook:after {
-            content: "\f231"
+            content: "\f231";
+            //color: #3B5998;
           }
           &.instagram:after {
-            content: "\f350"
+            content: "\f350";
+            //background: -webkit-linear-gradient( #8a3ab9, #4c68d7, #e95950, #fccc63);
+            //-webkit-background-clip: text;
+            //-webkit-text-fill-color: transparent;
           }
           &.github:after {
             content: "\f233"
@@ -182,28 +199,29 @@ nav.main-nav {
 }
 
 .main-nav-m {
+  display: none;
   position: fixed;
   z-index: 11;
   width: 100%;
   &.slide-in {
     .shadow {
-      transition: ease-in-out 0.5s;
+      transition: ease-in-out 0.4s;
       visibility: hidden;
     }
     .main-nav-wrapper {
       animation: slide-in-sidebar;
-      animation-duration: 0.5s;
+      animation-duration: 0.4s;
       visibility: hidden;
     }
   }
   &.slide-out {
     .main-nav-wrapper {
       animation: slide-out-sidebar;
-      animation-duration: 0.5s;
+      animation-duration: 0.4s;
       visibility: visible;
     }
-    .shadow{
-      transition: ease-in-out 0.5s;
+    .shadow {
+      transition: ease-in-out 0.4s;
       visibility: visible;
     }
   }
@@ -224,11 +242,14 @@ nav.main-nav {
       position: absolute;
       background-image: url('../images/nav-bg.png');
       background-repeat: no-repeat;
-      opacity: 0.05;
+      opacity: 0.03;
       height: 100vh;
+      position: 1;
       width: 100%;
     }
     .nav-content {
+      position: absolute;
+      position: 2;
       padding: 20px;
       .ion-back-icon {
         font-size: 25px;

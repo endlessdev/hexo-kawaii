@@ -3,6 +3,7 @@ section.content-section {
     display: inline-block;
     width: 100%;
     header.content-header {
+        z-index: 20;
         position: fixed;
         width: 100%;
         background-color: #fafafa;
@@ -26,6 +27,7 @@ section.content-section {
                 font-size: 12px;
                 padding-bottom: 20px !important;
                 &.back {
+                    font-weight: bold;
                     padding-left: 0 !important;
                     color: rgba(0, 0, 0, 0.2) !important;
                     border-bottom: 2px solid $accent-color;
@@ -36,45 +38,6 @@ section.content-section {
                 &:not(.active) {
                     color: #757575;
                     font-size: 12px;
-                }
-            }
-        }
-    }
-    .about-section {
-        padding-top: 10px;
-        .intro-images {
-            overflow-x: scroll;
-        }
-        &>.title {
-            font-family: "Helvetica Neue", sans-serif !important;
-            font-size: 48px;
-            font-weight: 200;
-            margin-bottom: 0;
-        }
-        &>.summary {
-            font-size: 17px;
-            color: #707070;
-        }
-        .edu-item {
-            margin-bottom: 10px;
-            &>.icon:before {
-                font-family: "Ionicons";
-                content: "\f357";
-                font-size: 36px;
-                margin-right: 15px;
-                vertical-align: middle;
-            }
-            .content {
-                display: inline-block;
-                vertical-align: middle;
-                &>.title {
-                    font-size: 18px;
-                    display: inline-block;
-                    margin-bottom: 0;
-                }
-                &>.summary {
-                    display: inline-block;
-                    color: #767676;
                 }
             }
         }

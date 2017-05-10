@@ -1,31 +1,33 @@
+<% var firstSegment = page.path.split('/')[0] %>
+
 <div class="mobile-top-menu">
     <div class="menu-title">
-        <span class="ion-menu-icon"></span>
+        <!--<span class="ion-menu-icon"></span>-->
         <div class="thumb"></div>
         <div class="content">
             <h2 class="title">JADE <b>YEOM</b></h2>
-            <small class="summary">不狂不及 - EXPERIMENT, FAIL, LEARN, REPEAT.</small>
+            <small class="summary"><b>不狂不及</b> - EXPERIMENT, FAIL, LEARN, REPEAT.</small>
         </div>
     </div>
 </div>
 <header class="content-header">
     <div class="ui secondary pointing menu">
         <% if(page.layout == "post") { %>
-        <a class="ui item back" href="/index.html">
+        <a class="ui item back" href="/">
             <i class="angle left icon"></i> POSTS
         </a>
         <% } else { %>
-        <a class="active <%- page.layout == undefined ? 'active' : '' %> item" href="/index.html">
+        <a class="item <%- page.layout == undefined ? 'active' : '' %>" href="/">
             POSTS
         </a>
         <% } %>
-        <a class="item" href="/about">
+        <a class="item <%- firstSegment == 'about' ? 'active' : ''%>" href="/about">
             ABOUT
         </a>
-        <a class="item" href="/photos">
+        <a class="item <%- firstSegment == 'photos' ? 'active' : ''%>" href="/photos">
             PHOTOS
         </a>
-        <a class="item" href="/projects">
+        <a class="item <%- firstSegment == 'about' ? 'projects' : ''%>" href="https://github.com/endlessdev">
             PROJECTS
         </a>
     </div>

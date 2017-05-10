@@ -1,1 +1,8 @@
-<%- partial('_page/article-full', {item: page}) %>
+<% var firstSegment = page.path.split('/')[0] %>
+<% if (firstSegment == "about"){ %>
+<%- partial('_page/about.ejs', {item: page}) %>
+<% } else if (firstSegment == "photos") { %>
+<%- partial('_page/photos.ejs', {site : site, pageInfo: site}) %>
+<% } else { %>
+<%- partial('_page/article-full.ejs', {item: page}) %>
+<% } %>

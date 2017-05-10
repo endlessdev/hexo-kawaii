@@ -2,13 +2,13 @@
 title: YeomME
 subtitle:
 description:
-author: John Doe
+author: Jade Yeom
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://endlessdev.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -23,6 +23,8 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+profile_image : https://avatars3.githubusercontent.com/u/3799158?v=3&s=460
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -30,7 +32,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -62,10 +64,10 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: yeomme
-disqus_shortname: jadeyeom
+disqus_shortname: endlessdev
 
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/endlessdev/endlessdev.github.io
+  branch: master
+  message: Hello Hexo!

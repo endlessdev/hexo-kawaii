@@ -1,0 +1,32 @@
+<p class="blog-post-meta">
+                    <span class="meta-item date">
+                    <i class="calendar outline icon"></i> <%= item.date.format(config.date_format) %>
+                        <% if(item.author) { %>
+                        by <%- item.author %>
+                        <% } %>
+                    </span>
+    <% if (item.categories && item.categories.length){ %>
+    <span class="meta-item categories">
+                        <i class="archive icon"></i>
+        <%
+            var categories = [];
+            item.categories.forEach(function (category) {
+                categories.push('<a href="' + config.root + category.path + '">' + category.name + '</a>');
+            });
+        %>
+        <%- categories.join(' / ') %>
+                        </span>
+    <% } %>
+    <% if (item.tags && item.tags.length){ %>
+    <span class="meta-item tags">
+                            <i class="tags icon"></i>
+        <%
+            var tags = [];
+            item.tags.forEach(function (category) {
+                tags.push('<a href="' + config.root + category.path + '">#' + category.name + '</a>');
+            });
+        %>
+        <%- tags %>
+                        </span>
+    <% } %>
+</p>
